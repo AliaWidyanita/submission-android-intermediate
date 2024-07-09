@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="4dp"
+    card_view:cardCornerRadius="15dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/iv_story_photo"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintHorizontal_bias="0.0"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/photo_story"
+        card_view:layout_constraintBottom_toTopOf="@+id/tv_name_story"
+        tools:src="@tools:sample/avatars">
+    </ImageView>
+
+        <TextView
+            android:id="@+id/tv_name_story"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            card_view:layout_constraintEnd_toEndOf="@+id/iv_story_photo"
+            card_view:layout_constraintStart_toStartOf="@+id/iv_story_photo"
+            card_view:layout_constraintTop_toBottomOf="@+id/iv_story_photo"
+            tools:text="@string/name_story" />
+
+        <TextView
+            android:id="@+id/tv_description_story"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            card_view:layout_constraintStart_toStartOf="@+id/tv_name_story"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_name_story"
+            tools:text="@string/description_story" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
